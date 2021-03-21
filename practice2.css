@@ -5,7 +5,7 @@ padding: 0px;
 box-sizing: border-box;
 }
 body{
-    background-color: gray;
+    background-color: ;
 }
 .navbar{
 background-color: #0098da;
@@ -15,16 +15,7 @@ width: 100%;
 height: 50px;
 transition: top 0.3s;
 }
-.sticky-nav{
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    top: -100px;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-}
+
 .hold-top{
     margin-left: 65px;
     width: 320px;
@@ -43,13 +34,113 @@ transition: top 0.3s;
     padding-bottom: 10px;
     padding-top: 10px;
 }
-.sticky-nav img{
-    width: 180px;
-    margin-left: 30px;
-}
 .navbar .hold-top a span{
     font-size: 1.3rem;
 }
+
+/* Sticky nav starts here */
+.sticky-nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    top: -100px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.sticky-nav img{
+    width: 180px;
+    margin-left: 60px;
+}
 .sticky-menu{
-    background-color: red;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sticky-nav a{
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+    will-change: transform, opacity;
+}
+.sticky-nav a:nth-child(2){
+    padding: 12px 25px;
+    background-color: transparent;
+    color: black;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+/* Sticky nav starts here end*/
+.trans-nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 50px;
+    background: black;
+}
+.trans-nav img{
+    width: 170px;
+    margin-left: 60px;
+}
+.trans-nav a{
+    padding: 12px 25px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+}
+.trans-nav a:nth-child(2){
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+.trans-menu{
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.vh100 h1{
+    color: white;
+    font-weight: 400;
+    font-size: 5rem;
+    padding-top: 140px;
+    padding-left: 130px;
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+}
+.vh100 img{
+    width: 100%;
+}
+.vh100{
+    height: 100vh;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.section{
+    width: 100%;
+    height: 500px;
+    background-color: turquoise;
+    margin-top: 100px;
+    position: relative;
+}
+.section2{
+    width: 100%;
+    height: 400px;
+    background-color: violet;
+}
+.section3{
+    width: 100%;
+    height: 400px;
+    background-color: greenyellow;
 }
