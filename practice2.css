@@ -4,8 +4,9 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 }
+
 body{
-    background-color: ;
+    background-color: green;
 }
 .navbar{
 background-color: #0098da;
@@ -111,8 +112,8 @@ transition: top 0.3s;
 
 .vh100 h1{
     color: white;
-    font-weight: 400;
-    font-size: 5rem;
+    font-weight: 800;
+    font-size: 6rem;
     padding-top: 140px;
     padding-left: 130px;
     font-family: 'Karla', sans-serif;
@@ -122,7 +123,7 @@ transition: top 0.3s;
     width: 100%;
 }
 .vh100{
-    height: 100vh;
+    width: 100vh;
     border: 1px solid black;
     z-index: 1;
 }
@@ -144,3 +145,63 @@ transition: top 0.3s;
     height: 400px;
     background-color: greenyellow;
 }
+/* .preloader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 30;
+    background-color: white;
+    top: 0;
+    display: block;
+
+    #preloader{
+
+    }
+} */
+
+
+/* RESPONSIVE CSS */
+@media only screen and (max-width: 600px) {
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .navbar .hold-top a{
+        font-family: 'Lora', serif;
+        font-size: .6rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .vh100 h1{
+        font-size: 2rem;
+    }
+    .vh100{
+        width: 100%;
+    }
+    .hold-top{
+        margin-left: 10px;
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar .hold-top a{
+        font-size: 1rem;
+    }
+    .sticky-menu .sticky-nav, .trans-menu, .trans-nav {
+        display: none;
+    }
+    .sticky-menu a{
+        display: none;
+    }
+    .sticky-nav img{
+        width: 100px;
+    }
+  
+  }
