@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="practice2.css">
 </head>
 <body>
-  <div class="page-wrapper">
-
+  <div class="page-wrapper loaded">
+ <div class="menu-btn-mob">
+   <div class="menu-btn-burger"></div>
+ </div>
   
   <!-- Top covid blue bar -->
     <div class="navbar">
@@ -46,19 +48,24 @@
     </div>
   
     <div class="vh100">
-      <img src="img/landing_bg.jpg" alt="">
+      <img src="img/hero.jpg" alt="" height="50%">
       <h1>Your future <br>starts here</h1>
-     
+      <p>Apply to college for the first time or transfer to complete <br>your degree. Navigate your entire college application <br>journey with Common App.</p>
+      <p class="mob">Apply to college for the first <br>time or transfer to complete <br>your degree. Navigate your entire <br>college application journey with<br> Common App.</p>
     </div>
-    <div class="section">kjljgkjhgkjhvj</div>
-    <div class="section2">
-      oooooooooooooooooo
+    <div class="section">
+        kjljgkjhgkjhvj
     </div>
+    <div class="section2"> oooooooooooooooooo</div>
     <div class="section3"></div>
        
-    <div class="preloader-wrapper">
-      <div id="preloader"></div>
-    </div>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+   
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+   
+  </div>
   </div>
 <script>
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
@@ -84,6 +91,12 @@ function scrollFunction() {
   }
 }
 
+        //after window is loaded completely 
+        window.onload = function(){
+        //hide the preloader
+        document.querySelector(".preloader").style.display = "none";
+    }
     </script>
+    <script src="hmenu.js"></script>
 </body>
 </html>

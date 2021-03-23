@@ -25,6 +25,9 @@ transition: top 0.3s;
     justify-content: space-around;
     align-items: center;
 }
+.hold-top img{
+    width: 20px;
+}
 .navbar .hold-top a{
     font-family: 'Lora', serif;
     font-size: 1rem;
@@ -80,15 +83,16 @@ transition: top 0.3s;
 /* Sticky nav starts here end*/
 .trans-nav{
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between; 
     margin-top: 50px;
     background: black;
+    z-index: 2;
 }
 .trans-nav img{
-    width: 170px;
-    margin-left: 60px;
+    width: 150px;
+    margin-left: 80px;
 }
 .trans-nav a{
     padding: 12px 25px;
@@ -109,33 +113,43 @@ transition: top 0.3s;
     justify-content: space-around;
     align-items: center;
 }
-
 .vh100 h1{
     color: white;
-    font-weight: 800;
-    font-size: 6rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+    font-size: 5rem;
     padding-top: 140px;
-    padding-left: 130px;
     font-family: 'Karla', sans-serif;
     position: absolute;
-    top: 0;
+    top: 120px;
+    left: 80px;
+    z-index: 0;
+}
+.vh100 p{
+    position: absolute;
+    top: 430px;
+    font-family: 'Karla';
+    font-size: 18px;
+    left: 80px;
+    z-index: 5;
+    color: white;
+    line-height: 1.5rem;
 }
 .vh100 img{
-    width: 100%; /* or any custom size */
-    height: 100%; 
-    object-fit: contain;
+    background-position: center;
+    width: 100%;
+    height: 960px;
+    z-index: ;
 }
 .vh100{
-    width: 100%;
-    border: 1px solid black;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .section{
     width: 100%;
     height: 500px;
-    background-color: turquoise;
-    margin-top: 100px;
+    background-color: #F3F3F3;
     position: relative;
 }
 .section2{
@@ -148,7 +162,59 @@ transition: top 0.3s;
     height: 400px;
     background-color: greenyellow;
 }
-/* .preloader-wrapper{
+.menu-btn-mob{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 18;
+    display: none;
+}
+.menu-btn-burger{
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    display: none;
+}
+.menu-btn-burger::before, .menu-btn-burger::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burger::before{
+    transform: translateY(-16px);
+}
+.menu-btn-burger::after{
+    transform: translateY(16px);
+}
+/* Animation menu burger */
+.menu-btn-mob.open .menu-btn-burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn-mob.open .menu-btn-burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn-mob.open .menu-btn-burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+.vh100 p.mob{
+    display: none;
+}
+loader-wrapper{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -160,8 +226,34 @@ transition: top 0.3s;
     #preloader{
 
     }
-} */
-
+} 
+/* Loaded */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
 
 /* RESPONSIVE CSS */
 @media only screen and (max-width: 600px) {
@@ -182,9 +274,30 @@ transition: top 0.3s;
     }
     .vh100 h1{
         font-size: 2rem;
+        z-index: 8;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        line-height: 2rem;
     }
-    .vh100{
+    .vh100 p.mob{
+        position: absolute;
+        top:220px;
+        left: 26px;
+        line-height: 1rem;
+        color: white;
+        font-size: 1rem;
+        z-index: 192;
+        display: block;
+    }
+    .vh100 p{
+        display: none;
+    }
+    .vh100 img{
         width: 100%;
+        height: 60%;
+        position: absolute;
+        z-index: 7;
     }
     .hold-top{
         margin-left: 10px;
@@ -203,8 +316,12 @@ transition: top 0.3s;
     .sticky-menu a{
         display: none;
     }
-    .sticky-nav img{
-        width: 100px;
+    .sticky-nav, .hold-top{
+        display: none;
     }
+    .menu-btn-burger, .menu-btn-mob{
+        display: block;
+    }
+    
   
   }
