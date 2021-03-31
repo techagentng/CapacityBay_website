@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CapacityBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice2.css">
+</head>
+<body>
+  <!-- Mobile menu -->
+  <div class="mobile-menu"></div>
+  <div class="page-wrapper loaded">    
+    <img src="img/CapacityBay2.svg" class="mob-logo" alt="img">
+ <div class="menu-btn-mob">
+   <div class="menu-btn-burger"></div>
+ </div>
+  
+  <!-- Top covid blue bar -->
+    <div class="navbar">
+        <div class="hold-top">
+          <img src="img/icon.png" alt="icon">
+          
+          <a href="#">Access our COVID19 resources<span> ></span></a>
+        </div>        
+    </div>
+    <!-- Top covid blue bar end/-->
+
+    <!-- Sticky navigation on scroll -->
+    <div class="sticky-nav">
+      <img src="img/CapacityBay.svg" alt="logo">
+      <ul>
+        <li>Home</li>
+        <li>Courses</li>
+        <li>About Us<span class="caret"></span>
+        
+        </li>
+        <li>Consultancy</li>
+        <li>Programs</li>
+      </ul>
+      <div class="sticky-menu">
+        <img src="img/search-icon-black.png" alt="">
+        <a>Sign in</a>
+        <a>Create and account</a>
+      </div>
+    </div>
+    <!-- Sticky navigation on scroll end/-->
+  
+    <!-- Transparent navigation menu -->
+    <div class="trans-nav">
+      <img src="img/CapacityBay2.svg" alt="logo">
+      <div class="trans-menu">
+        <img src="img/search-icon-white.png" alt="">
+        <a class="dd">Sign in</a>
+        <a>Create and account</a>
+      </div>
+    </div>
+  
+    <div class="vh100">
+      
+      <h1>Your future <br>starts here</h1>
+      <p>Apply to college for the first time or transfer to complete <br>your degree. Navigate your entire college application <br>journey with Common App.</p>
+      <p class="mob">Apply to college for the first <br>time or transfer to complete <br>your degree. Navigate your entire <br>college application journey with<br> Common App.</p>
+      <a href="#">Call to action</a>
+    </div>
+    
+    <div class="section">
+        kjljgkjhgkjhvj
+    </div>
+    <div class="section2"> oooooooooooooooooo</div>
+    <div class="section3"></div>
+       
+    <div id="loader-wrapper">
+   
+   
+  </div>
+  </div>
+<script>
+// /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector(".navbar").style.top = "0";
+//   } else {
+//     document.querySelector(".navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.querySelector(".sticky-nav").style.top = "0";
+  } else {
+    document.querySelector(".sticky-nav").style.top = "-100px";
+  }
+}
+
+        //after window is loaded completely 
+        window.onload = function(){
+        //hide the preloader
+        document.querySelector(".preloader").style.display = "none";
+    }
+    </script>
+    <script src="hmenu.js"></script>
+</body>
+</html>
