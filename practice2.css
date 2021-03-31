@@ -95,9 +95,9 @@ transition: top 0.3s;
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     background: black;
-    z-index: 2;
+    z-index: 500;
     padding-right: 30px;
 }
 .sticky-nav ul{
@@ -186,7 +186,11 @@ transition: top 0.3s;
     left: 80px;
     text-decoration: none;
     color: black;
-
+    font-weight: 700;
+}
+.vh100 a:hover{
+    background-color: black;
+    color: white;
 }
 .vh100 p{
     position: absolute;
@@ -197,6 +201,7 @@ transition: top 0.3s;
     z-index: 5;
     color: white;
     line-height: 1.5rem;
+    z-index: 1;
 }
 /* .vh100 img{
     background-position: center;
