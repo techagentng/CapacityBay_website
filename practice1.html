@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CapacityBay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,7 +14,9 @@
     <link rel="stylesheet" href="practice2.css">
 </head>
 <body>
-  <div class="page-wrapper loaded">
+  <!-- Mobile menu -->
+  <div class="mobile-menu"></div>
+  <div class="page-wrapper loaded">    
     <img src="img/CapacityBay2.svg" class="mob-logo" alt="img">
  <div class="menu-btn-mob">
    <div class="menu-btn-burger"></div>
@@ -21,7 +24,6 @@
   
   <!-- Top covid blue bar -->
     <div class="navbar">
-      <a class="amob" href="#">Access our COVID19 resources<span> ></span></a>
         <div class="hold-top">
           <img src="img/icon.png" alt="icon">
           
@@ -55,7 +57,7 @@
       <img src="img/CapacityBay2.svg" alt="logo">
       <div class="trans-menu">
         <img src="img/search-icon-white.png" alt="">
-        <a>Sign in</a>
+        <a class="dd">Sign in</a>
         <a>Create and account</a>
       </div>
     </div>
@@ -65,7 +67,9 @@
       <h1>Your future <br>starts here</h1>
       <p>Apply to college for the first time or transfer to complete <br>your degree. Navigate your entire college application <br>journey with Common App.</p>
       <p class="mob">Apply to college for the first <br>time or transfer to complete <br>your degree. Navigate your entire <br>college application journey with<br> Common App.</p>
+      <a href="#">Call to action</a>
     </div>
+    
     <div class="section">
         kjljgkjhgkjhvj
     </div>
@@ -78,17 +82,18 @@
   </div>
   </div>
 <script>
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".navbar").style.top = "0";
-  } else {
-    document.querySelector(".navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector(".navbar").style.top = "0";
+//   } else {
+//     document.querySelector(".navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
+
 // When the user scrolls down 20px from the top of the document, slide down the navbar
 // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
 window.onscroll = function() {scrollFunction()};

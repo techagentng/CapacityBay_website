@@ -6,7 +6,7 @@ box-sizing: border-box;
 }
 
 body{
-    background-color: green;
+    font-family: sans-serif;
 }
 .navbar{
 background-color: #0098da;
@@ -115,21 +115,26 @@ transition: top 0.3s;
     width: 150px;
     margin-left: 80px;
 }
-.trans-nav a{
-    padding: 8px 27px;
-    background-color: white;
-    color: black;
+.trans-menu a{
+    padding: 8px 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
     border-radius: 25px;
+    border: 2px solid white;
+}
+.trans-nav .trans-menu .dd{
+    border: 1px solid white;
+    padding: 7px 25px;
 }
 .trans-nav a:nth-child(2){
     padding: 12px 25px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 25px;
     border: 2px solid black;
 }
 .trans-menu{
-    width: 400px;
+    width: 600px;
     height: 60%;
     display: flex;
     justify-content: space-between;
@@ -139,7 +144,7 @@ transition: top 0.3s;
     width: 30px;
 }
 .vh100{
-    background-image: url(img/Hero.jpg);
+    background-image: url(img/landing_bg.jpg);
     width: 100%;
     height: 960px;
     background-repeat: no-repeat;
@@ -151,7 +156,7 @@ transition: top 0.3s;
         background-image: url(img/Hero.jpg);
     }
     50%{
-        background-image: url(img/Hero.jpg);
+        background-image: url(img/hero2.jpg);
     }
     75%{
         background-image: url(img/Hero.jpg);
@@ -171,6 +176,17 @@ transition: top 0.3s;
     top: 120px;
     left: 80px;
     z-index: 0;
+}
+.vh100 a{
+    background-color: white;
+    padding: 16px 60px;
+    position: absolute;
+    border-radius: 25px;
+    top: 540px;
+    left: 80px;
+    text-decoration: none;
+    color: black;
+
 }
 .vh100 p{
     position: absolute;
@@ -201,12 +217,18 @@ transition: top 0.3s;
 .section2{
     width: 100%;
     height: 400px;
-    background-color: violet;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
 .section3{
     width: 100%;
     height: 400px;
     background-color: greenyellow;
+}
+.mobile-menu{
+    width: 100%;
+    height: 100vh;
+    background-color: cadetblue;
+    display: none;
 }
 .menu-btn-mob{
     width: 80px;
@@ -260,6 +282,14 @@ transition: top 0.3s;
 .vh100 p.mob{
     display: none;
 }
+.protrude{
+    width: 80%;
+    height: 500px;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    position: absolute;
+    top: -220px;
+    left: 150px;
+}
 loader-wrapper{
     position: fixed;
     width: 100%;
@@ -275,9 +305,12 @@ loader-wrapper{
 
 /* RESPONSIVE CSS */
 @media only screen and (max-width: 600px) {
+    .protrude{
+        display: none;
+    }
     .navbar {
       width: 100%;
-      display: flex;
+      display: none;
       justify-content: flex-start;
       align-items: center;
     }
@@ -297,6 +330,7 @@ loader-wrapper{
         border-bottom: 1px solid white;
         display: flex;
         justify-content: flex-start;
+        width: 100%;
     }
     .vh100 h1{
         font-size: 2rem;
@@ -357,5 +391,9 @@ loader-wrapper{
         z-index: 444;
         width: 130px;
         margin-left: 30px;
+    }
+    .mobile-menu{
+        display: block;
+        z-index: 3000;
     }
   }

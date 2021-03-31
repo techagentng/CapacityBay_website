@@ -1,3 +1,4 @@
+//Hasmburger menu code for mobile 
 const menuBtn = document.querySelector('.menu-btn-mob');
 let menuOpen = false;
 menuBtn.addEventListener('click', doAction);
