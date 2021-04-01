@@ -23,6 +23,16 @@
     margin-right: 200px;
     margin-top: 80px;
 }
+.course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.course img{
+    width: 60px;
+    height: 60px;
+}
 .row{
     display: flex;
     flex-direction: row;
@@ -30,11 +40,17 @@
 }
 .row .course{
     width: 140px;
-    height: 100px;
+    height: 90px;
     border-radius: 6px;
     background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
+    transition: .3s;
+}
+.row .course:hover{
+    width: 150px;
+    height: 100px;
+    border-top: 5px solid blueviolet;
 }
 .header-text p, h1{
   color: white;
