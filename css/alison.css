@@ -3,6 +3,8 @@
     height: 500px;
     background-image: linear-gradient(-225deg, #222224 0%, #17485b 50%, #0585b4 100%);
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 .header-text{
     width: 40%;
@@ -12,18 +14,36 @@
     padding-top: 150px;
     margin-left: 80px;
 }
-.course-button{
-    width: 30%;
+.course-buttons{
+    width: 40%;
     height: 100%;
     background-color: red;
+    margin-right: 200px;
+}
+.course-buttons .course{
+    width: 100%;
+    height: 90px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
 }
 .header-text p, h1{
   color: white;
   padding-bottom: 20px;
+}
+.header-text a{
+    padding: 10px 27px;
+    background-color: greenyellow;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    border-radius: 6px;
 }
 .header-text h1{
     font-size: 3rem;
 }
 .header-text p{
     line-height: 1.5rem;
-  }
+}
+
